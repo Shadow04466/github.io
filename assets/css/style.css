@@ -246,3 +246,24 @@ html, body {
   height: 100%;
 }
 
+
+/* FIX EXCESS WHITE SPACE */
+header {
+  margin-bottom: 0;
+}
+
+.ad-container {
+  margin: 0 auto;
+}
+
+#categories {
+  margin-top: 0;
+}
+
+/* Button polish */
+#categories button {
+  border-radius: 20px;
+  padding: 5px 14px;
+}
+
+
