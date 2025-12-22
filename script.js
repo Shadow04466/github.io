@@ -23,12 +23,13 @@ const analytics = getAnalytics(app);
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 function login() {
+ /*
   if (user.value === "admin" && pass.value === "Shadowlpha") {
     localStorage.setItem("login", true);
     location.href = "admin.html";
   } else alert("Wrong login");
 }
-
+*/
 if (location.pathname.includes("admin") && !localStorage.getItem("login")) {
   location.href = "login.html";
 }
@@ -88,6 +89,7 @@ function toggleDark() {
 }
 
 showPosts();
+
 
 
 
