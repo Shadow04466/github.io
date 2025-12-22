@@ -52,3 +52,31 @@
   font-size: 18px;
   line-height: 1.8;
 }
+/* ===== CATEGORY BUTTONS (PREMIUM) ===== */
+
+#categories {
+  margin-top: -10px;
+}
+
+#categories .btn {
+  border-radius: 999px;
+  padding: 8px 22px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  transition: all .25s ease;
+}
+
+#categories .btn:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+#categories .btn.active {
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+  border-color: transparent;
+}
+
