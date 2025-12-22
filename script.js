@@ -1,3 +1,8 @@
+// Firebase SDKs
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, updateDoc, doc, increment } 
+from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 function login() {
@@ -66,4 +71,5 @@ function toggleDark() {
 }
 
 showPosts();
+
 
