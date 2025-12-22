@@ -25,21 +25,21 @@
 </nav>
 
 <!-- ======================
-     HERO
+     HERO (FIXED HEIGHT)
 ====================== -->
-<header class="bg-light py-4">
+<header class="bg-light py-3">
   <div class="container">
-    <h1 class="fw-bold">Latest Blog Posts</h1>
-    <p class="text-muted">
+    <h1 class="fw-bold mb-1">Latest Blog Posts</h1>
+    <p class="text-muted mb-0">
       Professional articles on software testing & technology
     </p>
   </div>
 </header>
 
 <!-- ======================
-     TOP AD
+     TOP AD (TIGHT)
 ====================== -->
-<div class="container my-4">
+<div class="container my-3">
   <div class="ad-container">
     <span class="ad-label">Advertisement</span>
     <div class="ad-box">AdSense Ad Here</div>
@@ -47,46 +47,28 @@
 </div>
 
 <!-- ======================
-     CATEGORY FILTER (FIXED)
+     CATEGORY FILTER (FIXED POSITION)
 ====================== -->
-<div class="container mb-3">
+<div class="container mb-4">
   <div
     id="categories"
     class="d-flex justify-content-start gap-2 flex-wrap"
   >
-    <button class="btn btn-outline-dark btn-sm active" data-cat="all">
-      All
-    </button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="tech">
-      Tech
-    </button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="testing">
-      Testing
-    </button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="other">
-      Other
-    </button>
+    <button class="btn btn-dark btn-sm active" data-cat="all">All</button>
+    <button class="btn btn-outline-dark btn-sm" data-cat="tech">Tech</button>
+    <button class="btn btn-outline-dark btn-sm" data-cat="testing">Testing</button>
+    <button class="btn btn-outline-dark btn-sm" data-cat="other">Other</button>
   </div>
 </div>
 
 <!-- ======================
      POSTS SECTION
 ====================== -->
-<section class="container my-4 flex-grow-1">
+<section class="container pb-5 flex-grow-1">
   <div id="posts" class="row g-4">
     <!-- Posts load via blog.js -->
   </div>
 </section>
-
-<!-- ======================
-     BOTTOM AD
-====================== -->
-<div class="container my-4">
-  <div class="ad-container">
-    <span class="ad-label">Advertisement</span>
-    <div class="ad-box">AdSense Ad Here</div>
-  </div>
-</div>
 
 <!-- ======================
      FOOTER
