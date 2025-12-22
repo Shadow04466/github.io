@@ -104,3 +104,7 @@
 .featured-card h3 {
   font-weight: 700;
 }
+Firebase → loadPosts()
+        → forEach post
+        → allPosts.push()
+        → renderPosts(allPosts)
