@@ -242,3 +242,7 @@ footer small {
     max-height: 280px;
   }
 }
+html, body {
+  height: 100%;
+}
+
