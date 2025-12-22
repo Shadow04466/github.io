@@ -26,16 +26,16 @@ async function loadPosts() {
     if (p.status !== "publish") return;
 
     postsBox.innerHTML += `
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100 shadow-sm">
+  <div class="col-sm-10 col-md-6 col-lg-4">
+    <div class="card h-100 blog-card">
       ${p.image ? `<img src="${p.image}" class="card-img-top">` : ""}
-      <div class="card-body">
+      <div class="card-body d-flex flex-column">
         <h5 class="card-title">${p.title}</h5>
-        <p class="card-text">
+        <p class="card-text flex-grow-1">
           ${p.content.substring(0,120)}...
         </p>
-        <a href="post.html?id=${d.id}" class="btn btn-primary btn-sm">
-          Read More
+        <a href="post.html?id=${d.id}" class="btn btn-outline-primary mt-auto">
+          Read More →
         </a>
       </div>
     </div>
