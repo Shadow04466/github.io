@@ -1,12 +1,9 @@
+// Firebase CDN imports (VERY IMPORTANT)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// 🔴 YOUR FIREBASE CONFIG (REAL VALUES)
 const firebaseConfig = {
   apiKey: "AIzaSyAc3G14YFLUtEfRZWjmGBU4OEzOrbK77fM",
   authDomain: "my-earning-blog.firebaseapp.com",
@@ -17,6 +14,9 @@ const firebaseConfig = {
   measurementId: "G-XG6V1Z5TVK"
 };
 
-// Initialize Firebase
+// Init Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// Export services
+export const auth = getAuth(app);
+export const db = getFirestore(app);
