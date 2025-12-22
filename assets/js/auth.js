@@ -1,6 +1,8 @@
 import { auth } from "./firebase.js";
-import { signInWithEmailAndPassword, onAuthStateChanged } 
-from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import {
+  signInWithEmailAndPassword,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
 const loginBtn = document.getElementById("loginBtn");
 const msg = document.getElementById("msg");
