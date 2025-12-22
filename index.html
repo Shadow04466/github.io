@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Earning Blog</title>
-  <meta name="description" content="Read latest professional blog articles on software testing, technology, and more.">
+  <meta name="description" content="Read professional blogs on software testing and technology">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap -->
@@ -12,36 +12,38 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+
+<!-- 🔥 IMPORTANT FIX -->
+<body class="d-flex flex-column min-vh-100">
 
 <!-- ======================
      NAVBAR
 ====================== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">My Earning Blog</a>
   </div>
 </nav>
 
 <!-- ======================
-     HERO SECTION
+     HERO
 ====================== -->
 <header class="bg-light py-5">
   <div class="container text-center">
     <h1 class="fw-bold">Latest Blog Posts</h1>
     <p class="text-muted mt-2">
-      Professional articles on software testing, technology & learning
+      Professional articles on software testing & technology
     </p>
   </div>
 </header>
 
 <!-- ======================
-     ADS (TOP – SUBTLE)
+     TOP AD
 ====================== -->
-<div class="ad-container">
-  <span class="ad-label">Advertisement</span>
-  <div class="ad-box">
-    AdSense Ad Here
+<div class="container">
+  <div class="ad-container">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-box">AdSense Ad Here</div>
   </div>
 </div>
 
@@ -58,36 +60,42 @@
 </div>
 
 <!-- ======================
-     BLOG POSTS GRID
+     POSTS SECTION
 ====================== -->
-<section class="container my-5">
+<section class="container my-5 flex-grow-1">
   <div id="posts" class="row g-4">
-    <!-- Blog cards load here via blog.js -->
+    <!-- Posts load via blog.js -->
   </div>
 </section>
 
 <!-- ======================
-     ADS (BOTTOM)
+     BOTTOM AD
 ====================== -->
-<div class="ad-container">
-  <span class="ad-label">Advertisement</span>
-  <div class="ad-box">
-    AdSense Ad Here
+<div class="container">
+  <div class="ad-container">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-box">AdSense Ad Here</div>
   </div>
 </div>
 
 <!-- ======================
-     FOOTER
+     FOOTER (FIXED)
 ====================== -->
-<footer class="bg-dark text-white py-4 mt-5">
+<footer class="bg-dark text-white py-4 mt-auto">
   <div class="container text-center">
     <p class="mb-1">&copy; 2025 My Earning Blog</p>
-    <small class="text-muted">Built with Firebase & Bootstrap</small>
+
+    <!-- Footer buttons -->
+    <div class="mt-2">
+      <a href="#" class="text-white me-3">About</a>
+      <a href="#" class="text-white me-3">Contact</a>
+      <a href="#" class="text-white">Privacy Policy</a>
+    </div>
   </div>
 </footer>
 
 <!-- ======================
-     BLOG SCRIPT
+     SCRIPT
 ====================== -->
 <script type="module" src="assets/js/blog.js"></script>
 
