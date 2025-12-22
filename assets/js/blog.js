@@ -67,6 +67,15 @@ function renderPosts(posts) {
   // 🔹 First 3 normal cards
   posts.slice(0, 3).forEach(p => {
     postsBox.innerHTML += `
+  <div class="col-12">
+    <div class="ad-box">
+      Advertisement
+      <small>In-feed Ad</small>
+    </div>
+  </div>
+`;
+
+    postsBox.innerHTML += `
       <div class="col-md-4">
         <div class="card h-100 blog-card">
           ${p.image ? `<img src="${p.image}" class="card-img-top">` : ""}
