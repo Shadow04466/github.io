@@ -41,6 +41,7 @@ function addPost() {
   localStorage.setItem("posts", JSON.stringify(posts));
   alert("Post Published!");
 }
+window.addPost = addPost;
 
 // ================= SHOW POSTS =================
 function showPosts() {
@@ -97,3 +98,4 @@ function toggleDark() {
 
 // ================= INIT =================
 showPosts();
+
