@@ -1,7 +1,111 @@
+/* ======================
+   GLOBAL STYLES
+====================== */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+.navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+/* ======================
+   HERO SECTION
+====================== */
+header h1 {
+  font-size: 2.4rem;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+/* ======================
+   BLOG CARDS (HOME)
+====================== */
+.blog-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card .card-body {
+  padding: 20px;
+}
+
+.blog-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-card .card-text {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ======================
+   FEATURED POST
+====================== */
+.featured-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.featured-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================
+   CATEGORY BUTTONS
+====================== */
+#categories button {
+  margin-bottom: 10px;
+}
+
+#categories button.active {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* ======================
+   SINGLE BLOG POST
+====================== */
 .blog-post {
   max-width: 800px;
   margin: auto;
-  font-family: "Segoe UI", sans-serif;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 .blog-title {
@@ -22,10 +126,13 @@
   width: 100%;
   max-height: 420px;
   object-fit: cover;
-  border-radius: 12px;
-  margin: 20px 0;
+  border-radius: 14px;
+  margin: 25px 0;
 }
 
+/* ======================
+   BLOG CONTENT
+====================== */
 .blog-content {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -37,17 +144,101 @@
 }
 
 .blog-content h2 {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   margin-bottom: 1rem;
   font-size: 1.6rem;
   font-weight: 600;
 }
 
+.blog-content h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .blog-content ul {
-  padding-left: 20px;
+  padding-left: 22px;
   margin-bottom: 1.5rem;
 }
 
 .blog-content li {
   margin-bottom: 8px;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 15px;
+  color: #666;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* ======================
+   LIKE BUTTON
+====================== */
+#likeBtn {
+  border-radius: 25px;
+  padding: 8px 18px;
+}
+
+/* ======================
+   ADSENSE STYLING
+====================== */
+.ad-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.ad-label {
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ad-box {
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 25px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer p {
+  font-size: 0.9rem;
+}
+
+footer small {
+  font-size: 0.75rem;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 1.9rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+
+  .blog-featured-img {
+    max-height: 280px;
+  }
 }
