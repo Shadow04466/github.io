@@ -1,1 +1,163 @@
 
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+/* ===== BLOG LIST ===== */
+#posts {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.post-card {
+  background: #fff;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.post-card h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.post-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.post-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: bold;
+}
+
+/* ===== SINGLE POST ===== */
+article {
+  max-width: 800px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+article h1 {
+  margin-bottom: 15px;
+}
+
+article img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+#likeBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  background: #e91e63;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#likeBtn:hover {
+  background: #c2185b;
+}
+
+/* ===== ADMIN LOGIN ===== */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background: #0066ff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004ecc;
+}
+
+/* ===== ADMIN DASHBOARD ===== */
+.admin-form {
+  max-width: 900px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.post-item {
+  background: #fff;
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.post-item button {
+  margin-left: 10px;
+  background: #ff5252;
+}
+
+.post-item button:first-child {
+  background: #ff9800;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #0066ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+}
