@@ -8,36 +8,17 @@ import {
   increment
 } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
+/* ======================
+   DOM ELEMENTS
+====================== */
 const postsBox = document.getElementById("posts");
 const postBox = document.getElementById("post");
 const categoryBox = document.getElementById("categories");
 
 let allPosts = [];
 
-
-async function loadPosts() {
-  const snap = await getDocs(collection(db, "posts"));
-  allPosts = [];                 // 🔹 reset memory
-  postsBox.innerHTML = "";
-
-  snap.forEach(d => {
-    const p = d.data();
-
-    if (p.status !== "publish") return;
-
-    // 🔥 YAHAN paste hota hai
-    allPosts.push({
-      id: d.id,
-      ...p
-    });
-  });
-
-  renderPosts(allPosts);          // 🔹 pehli baar sab show
-}
-
-
 /* ======================
-   LOAD POSTS (INDEX)
+   LOAD POSTS (HOME PAGE)
 ====================== */
 async function loadPosts() {
   const snap = await getDocs(collection(db, "posts"));
@@ -45,7 +26,9 @@ async function loadPosts() {
 
   snap.forEach(d => {
     const p = d.data();
-    if (p.status !== "publish") return;
+
+    // ✅ STATUS CHECK (FIXED)
+    if (!p.status || p.status.toLowerCase() !== "publish") return;
 
     allPosts.push({
       id: d.id,
@@ -56,6 +39,9 @@ async function loadPosts() {
   renderPosts(allPosts);
 }
 
+/* ======================
+   RENDER POSTS
+====================== */
 function renderPosts(posts) {
   postsBox.innerHTML = "";
 
@@ -67,22 +53,20 @@ function renderPosts(posts) {
   // 🔹 First 3 normal cards
   posts.slice(0, 3).forEach(p => {
     postsBox.innerHTML += `
-  <div class="col-12">
-    <div class="ad-box">
-      Advertisement
-      <small>In-feed Ad</small>
-    </div>
-  </div>
-`;
+      <div class="col-12">
+        <div class="ad-box">
+          Advertisement
+          <small>In-feed Ad</small>
+        </div>
+      </div>
 
-    postsBox.innerHTML += `
       <div class="col-md-4">
         <div class="card h-100 blog-card">
           ${p.image ? `<img src="${p.image}" class="card-img-top">` : ""}
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">${p.title}</h5>
             <p class="card-text flex-grow-1">
-              ${p.content.substring(0,100)}...
+              ${p.content.substring(0, 100)}...
             </p>
             <a href="post.html?id=${p.id}" class="btn btn-outline-primary mt-auto">
               Read More →
@@ -93,7 +77,7 @@ function renderPosts(posts) {
     `;
   });
 
-  // 🔥 Featured full-width card (4th post)
+  // 🔥 Featured post (4th)
   if (posts[3]) {
     const p = posts[3];
     postsBox.innerHTML += `
@@ -108,7 +92,7 @@ function renderPosts(posts) {
                 <span class="badge bg-dark mb-2">Featured</span>
                 <h3 class="card-title">${p.title}</h3>
                 <p class="card-text">
-                  ${p.content.substring(0,180)}...
+                  ${p.content.substring(0, 180)}...
                 </p>
                 <a href="post.html?id=${p.id}" class="btn btn-dark">
                   Read Full Article →
@@ -155,7 +139,7 @@ async function loadSinglePost(id) {
   const snap = await getDoc(ref);
 
   if (!snap.exists()) {
-    postBox.innerHTML = "Post not found";
+    postBox.innerHTML = "<p>Post not found</p>";
     return;
   }
 
@@ -167,7 +151,7 @@ async function loadSinglePost(id) {
 
   postBox.innerHTML = `
     <h1>${p.title}</h1>
-    ${p.image ? `<img src="${p.image}">` : ""}
+    ${p.image ? `<img src="${p.image}" class="img-fluid mb-3">` : ""}
     <p>${p.content}</p>
   `;
 
