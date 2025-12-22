@@ -1,7 +1,7 @@
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 function login() {
-  if (user.value === "admin" && pass.value === "1234") {
+  if (user.value === "admin" && pass.value === "Shadowlpha") {
     localStorage.setItem("login", true);
     location.href = "admin.html";
   } else alert("Wrong login");
@@ -66,3 +66,4 @@ function toggleDark() {
 }
 
 showPosts();
+
