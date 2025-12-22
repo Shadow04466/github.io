@@ -1,57 +1,22 @@
-/* ===== ADMIN DASHBOARD POLISH ===== */
-
-.post-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-}
-
-.post-item:last-child {
-  border-bottom: none;
-}
-
-.post-item b {
-  font-size: 16px;
-}
-
-.post-item .btn {
-  margin-left: 6px;
-}
-/* ===== PUBLIC BLOG POLISH ===== */
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-.post-single img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-.post-single h1 {
-  margin-bottom: 15px;
-}
-
-.post-single p {
-  font-size: 18px;
-  line-height: 1.7;
-}
-/* ===== BLOG POST GRID POLISH ===== */
+/* ===== BLOG POST GRID ===== */
 
 .blog-card {
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
 .blog-card .card-title {
@@ -60,14 +25,30 @@
 }
 
 .blog-card .card-text {
-  color: #555;
   font-size: 15px;
+  color: #555;
 }
 
-.blog-card img {
-  height: 220px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+#categories .btn {
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
 }
 
+#categories .btn.active {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== SINGLE POST ===== */
+
+.post-single img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.post-single p {
+  font-size: 18px;
+  line-height: 1.8;
+}
