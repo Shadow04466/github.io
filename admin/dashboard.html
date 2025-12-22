@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,20 +8,26 @@
 
 <h1>Admin Dashboard</h1>
 
-<p>✅ Logged in successfully</p>
+<section class="admin-form">
+  <input id="title" placeholder="Post Title">
+  <input id="image" placeholder="Image URL">
+  <textarea id="content" placeholder="Write post content..."></textarea>
+
+  <select id="status">
+    <option value="publish">Publish</option>
+    <option value="draft">Draft</option>
+  </select>
+
+  <button id="saveBtn">Save Post</button>
+</section>
+
+<hr>
+
+<h2>All Posts</h2>
+<div id="postList"></div>
 
 <button onclick="logout()">Logout</button>
 
-<script type="module">
-  import { auth } from "../assets/js/firebase.js";
-  import { signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-
-  window.logout = function () {
-    signOut(auth).then(() => {
-      location.href = "login.html";
-    });
-  };
-</script>
-
+<script type="module" src="../assets/js/admin.js"></script>
 </body>
 </html>
