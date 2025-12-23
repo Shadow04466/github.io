@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shadow04466.github.io/github.io
