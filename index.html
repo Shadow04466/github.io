@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>My Earning Blog</title>
-<meta name="description" content="Professional blogs for learning and earning">
+<meta name="description" content="Learn, Grow & Earn with professional blogs">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
 
 <nav class="navbar navbar-dark bg-dark">
   <div class="container">
@@ -19,54 +18,24 @@
   </div>
 </nav>
 
-<header class="bg-light py-3">
+<header class="bg-light py-4">
   <div class="container">
-    <h1 class="fw-bold mb-1">Latest Blog Posts</h1>
-    <p class="text-muted mb-0">Learn • Grow • Earn</p>
+    <h1 class="fw-bold">Latest Blog Posts</h1>
+    <p class="text-muted">Learn • Grow • Earn</p>
   </div>
 </header>
 
-<section class="container my-4 flex-grow-1">
-  <div class="row">
+<div class="container my-4">
+  <div id="posts" class="row g-4"></div>
+</div>
 
-    <!-- POSTS -->
-    <div class="col-md-8">
-      <div id="posts" class="row g-4"></div>
-    </div>
-
-    <!-- SIDEBAR -->
-    <aside class="col-md-4">
-
-      <div class="ad-container mb-4">
-        <span class="ad-label">Advertisement</span>
-        <div class="ad-box">AdSense Sidebar Ad</div>
-      </div>
-
-      <div class="card shadow-sm mb-4">
-        <div class="card-header fw-bold">🔥 Trending</div>
-        <ul class="list-group list-group-flush" id="trending"></ul>
-      </div>
-
-      <div class="card shadow-sm p-3">
-        <h6 class="fw-bold">📧 Subscribe</h6>
-        <input id="subEmail" class="form-control mb-2" placeholder="Your email">
-        <button class="btn btn-dark w-100" onclick="subscribe()">Subscribe</button>
-      </div>
-
-    </aside>
-
-  </div>
-</section>
-
-<footer class="bg-dark text-white py-4 mt-auto">
+<footer class="bg-dark text-white py-4">
   <div class="container text-center">
-    <p class="mb-1">&copy; 2025 My Earning Blog</p>
-    <a href="about.html" class="text-white me-3">About</a>
-    <a href="contact.html" class="text-white me-3">Contact</a>
-    <a href="privacy.html" class="text-white">Privacy</a>
+    <p class="mb-0">© 2025 My Earning Blog</p>
   </div>
 </footer>
 
+<!-- ✅ CORRECT PATH -->
 <script type="module" src="assets/js/blog.js"></script>
 </body>
 </html>
