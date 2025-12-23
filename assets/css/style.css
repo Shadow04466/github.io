@@ -266,4 +266,18 @@ header {
   padding: 5px 14px;
 }
 
+/* ===== FIX FOOTER ISSUE ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
 
