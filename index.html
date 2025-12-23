@@ -4,20 +4,15 @@
   <meta charset="UTF-8">
   <title>My Earning Blog</title>
 
-  <meta name="description" content="Learn, Grow and Earn with professional blog posts">
+  <!-- SEO -->
+  <meta name="description" content="Learn, Grow & Earn with professional blogs on software testing and technology">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Favicon (optional but recommended) -->
-  <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -39,9 +34,7 @@
 <header class="bg-light py-4">
   <div class="container">
     <h1 class="fw-bold mb-1">Latest Blog Posts</h1>
-    <p class="text-muted mb-0">
-      Learn · Grow · Earn
-    </p>
+    <p class="text-muted mb-0">Learn • Grow • Earn</p>
   </div>
 </header>
 
@@ -51,47 +44,52 @@
 <div class="container my-3">
   <div class="ad-container">
     <span class="ad-label">Advertisement</span>
-    <div class="ad-box">
-      AdSense Ad Here
-    </div>
+    <div class="ad-box">AdSense Ad Here</div>
   </div>
 </div>
 
 <!-- ======================
-     CATEGORY FILTER
+     CATEGORY FILTER (FIXED)
 ====================== -->
 <div class="container mb-4">
   <div
     id="categories"
     class="d-flex justify-content-start gap-2 flex-wrap"
   >
-    <button class="btn btn-dark btn-sm active" data-cat="all">All</button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="tech">Tech</button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="testing">Testing</button>
-    <button class="btn btn-outline-dark btn-sm" data-cat="other">Other</button>
+    <button class="btn btn-dark btn-sm active" data-cat="all">
+      All
+    </button>
+
+    <button class="btn btn-outline-dark btn-sm" data-cat="tech">
+      Tech
+    </button>
+
+    <button class="btn btn-outline-dark btn-sm" data-cat="testing">
+      Testing
+    </button>
+
+    <button class="btn btn-outline-dark btn-sm" data-cat="other">
+      Other
+    </button>
   </div>
 </div>
 
 <!-- ======================
      POSTS SECTION
-     (IMPORTANT: flex-grow-1 fixes footer)
 ====================== -->
-<section class="container pb-5 flex-grow-1">
+<section class="container flex-grow-1 pb-5">
   <div id="posts" class="row g-4">
-    <!-- Posts load via blog.js -->
+    <!-- Posts load here from blog.js -->
   </div>
 </section>
 
 <!-- ======================
-     FOOTER
+     FOOTER (FIXED)
 ====================== -->
 <footer class="bg-dark text-white py-4 mt-auto">
   <div class="container text-center">
-    <p class="mb-1">
-      © 2025 My Earning Blog
-    </p>
-
-    <div class="mt-2">
+    <p class="mb-1">© 2025 My Earning Blog</p>
+    <div>
       <a href="about.html" class="text-white me-3">About</a>
       <a href="contact.html" class="text-white me-3">Contact</a>
       <a href="privacy.html" class="text-white">Privacy Policy</a>
